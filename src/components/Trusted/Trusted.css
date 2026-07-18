@@ -1,0 +1,372 @@
+/*=================================
+TRUSTED SECTION
+=================================*/
+
+.trusted{
+
+    padding:90px 0;
+
+    background:#fff;
+
+    overflow:hidden;
+
+}
+
+.trusted-title{
+
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:0 20px;
+
+    margin-bottom:60px;
+
+}
+
+.trusted-title span{
+
+    color:#2563eb;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+.trusted-title h2{
+
+    font-size:46px;
+
+    margin:18px 0;
+
+    color:#0f172a;
+
+}
+
+.trusted-title p{
+
+    color:#64748b;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/*=================================
+ROWS
+=================================*/
+
+.marquee-wrapper{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+.marquee{
+
+    position:relative;
+
+    overflow:hidden;
+
+    cursor:grab;
+
+}
+
+.marquee:active{
+
+    cursor:grabbing;
+
+}
+
+/*=================================
+APPLE FADE
+=================================*/
+
+.marquee::before,
+
+.marquee::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    width:120px;
+
+    height:100%;
+
+    z-index:50;
+
+    pointer-events:none;
+
+}
+
+.marquee::before{
+
+    left:0;
+
+    background:linear-gradient(
+    90deg,
+    #fff,
+    rgba(255,255,255,0));
+
+}
+
+.marquee::after{
+
+    right:0;
+
+    background:linear-gradient(
+    -90deg,
+    #fff,
+    rgba(255,255,255,0));
+
+}
+
+/*=================================
+TRACK
+=================================*/
+
+.marquee-track{
+
+    display:flex;
+
+    gap:25px;
+
+    width:max-content;
+
+}
+
+/* Pause Animation */
+
+.marquee:hover .marquee-track{
+
+    animation-play-state:paused;
+
+}
+
+/*=================================
+TECH CARD
+=================================*/
+
+.tech-card{
+
+    min-width:240px;
+
+    height:170px;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    border:1px solid #edf2ff;
+
+    box-shadow:
+
+    0 12px 30px rgba(37,99,235,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.35s;
+
+}
+
+.tech-card:hover{
+
+    transform:
+
+    translateY(-10px)
+
+    scale(1.03);
+
+    box-shadow:
+
+    0 22px 45px rgba(37,99,235,.18);
+
+}
+
+.tech-card svg{
+
+    font-size:58px;
+
+    margin-bottom:18px;
+
+    transition:.35s;
+
+}
+
+.tech-card:hover svg{
+
+    transform:scale(1.15);
+
+}
+
+.tech-card h3{
+
+    color:#0f172a;
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+
+/*=================================
+ICON COLORS
+=================================*/
+
+.android{color:#3DDC84;}
+
+.angular{color:#DD0031;}
+
+.apple{color:#111111;}
+
+.node{color:#68A063;}
+
+.react{color:#61DAFB;}
+
+.python{color:#3776AB;}
+
+.wordpress{color:#21759B;}
+
+.html{color:#E34F26;}
+
+.php{color:#777BB4;}
+
+.sass{color:#CC6699;}
+
+.js{color:#F7DF1E;}
+
+.github{color:#181717;}
+
+.microsoft{color:#00A4EF;}
+
+
+
+/*=================================
+RESPONSIVE
+=================================*/
+
+@media(max-width:992px){
+
+.trusted-title h2{
+
+font-size:36px;
+
+}
+
+.tech-card{
+
+min-width:200px;
+
+height:150px;
+
+}
+
+.tech-card svg{
+
+font-size:48px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.trusted{
+
+padding:70px 0;
+
+}
+
+.trusted-title{
+
+margin-bottom:40px;
+
+}
+
+.trusted-title h2{
+
+font-size:30px;
+
+}
+
+.trusted-title p{
+
+font-size:16px;
+
+padding:0 20px;
+
+}
+
+.tech-card{
+
+min-width:170px;
+
+height:140px;
+
+}
+
+.tech-card svg{
+
+font-size:40px;
+
+}
+
+.tech-card h3{
+
+font-size:17px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.marquee::before,
+
+.marquee::after{
+
+width:35px;
+
+}
+
+.tech-card{
+
+min-width:145px;
+
+height:120px;
+
+}
+
+.tech-card svg{
+
+font-size:34px;
+
+}
+
+.tech-card h3{
+
+font-size:15px;
+
+}
+
+}
