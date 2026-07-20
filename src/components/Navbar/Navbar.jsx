@@ -18,17 +18,28 @@ function Navbar() {
 
   const [serviceOpen, setServiceOpen] = useState(false);
 
+  const closeMenu = () => {
+
+    setMenuOpen(false);
+
+    setServiceOpen(false);
+
+  };
+
   return (
 
     <nav className="navbar">
 
       <div className="navbar-container">
 
-        {/* Logo */}
+        {/* ================= Logo ================= */}
 
         <div className="logo">
 
-          <Link to="/">
+          <Link
+            to="/"
+            onClick={closeMenu}
+          >
 
             <img
               src={logo}
@@ -37,7 +48,10 @@ function Navbar() {
 
           </Link>
 
-          <Link to="/">
+          <Link
+            to="/"
+            onClick={closeMenu}
+          >
 
             <h2>Axiom</h2>
 
@@ -45,19 +59,35 @@ function Navbar() {
 
         </div>
 
-        {/* Navigation */}
+        {/* ================= Navigation ================= */}
 
-        <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+        <ul
+          className={
+            menuOpen
+              ? "nav-links active"
+              : "nav-links"
+          }
+        >
 
           <li>
 
-            <Link to="/">Home</Link>
+            <Link
+              to="/"
+              onClick={closeMenu}
+            >
+
+              Home
+
+            </Link>
 
           </li>
 
           <li>
 
-            <Link to="/about">
+            <Link
+              to="/about"
+              onClick={closeMenu}
+            >
 
               About Us
 
@@ -65,61 +95,141 @@ function Navbar() {
 
           </li>
 
-          {/* SERVICES DROPDOWN */}
+          {/* ================= SERVICES ================= */}
 
           <li
 
             className="dropdown"
 
-            onMouseEnter={() => setServiceOpen(true)}
+            onMouseEnter={() => {
 
-            onMouseLeave={() => setServiceOpen(false)}
+              if (window.innerWidth > 992) {
+
+                setServiceOpen(true);
+
+              }
+
+            }}
+
+            onMouseLeave={() => {
+
+              if (window.innerWidth > 992) {
+
+                setServiceOpen(false);
+
+              }
+
+            }}
 
           >
 
-            <div className="dropdown-title">
+            <div
 
-              Services
+              className="dropdown-title"
+
+              onClick={() => {
+
+                if (window.innerWidth <= 992) {
+
+                  setServiceOpen(!serviceOpen);
+
+                }
+
+              }}
+
+            >
+
+              <span>
+
+                Services
+
+              </span>
 
               <FaChevronDown
+
                 className={
+
                   serviceOpen
-                    ? "arrow rotate"
-                    : "arrow"
+
+                    ?
+
+                    "arrow rotate"
+
+                    :
+
+                    "arrow"
+
                 }
+
               />
 
             </div>
 
             <div
+
               className={
+
                 serviceOpen
-                  ? "dropdown-menu show"
-                  : "dropdown-menu"
+
+                  ?
+
+                  "dropdown-menu show"
+
+                  :
+
+                  "dropdown-menu"
+
               }
+
             >
 
-              <Link to="/services/offshore">
+              <Link
+
+                to="/services/offshore"
+
+                onClick={closeMenu}
+
+              >
 
                 Offshore Development
 
               </Link>
 
-              <Link to="/services/web-development">
+              <Link
+
+                to="/services/web-development"
+
+                onClick={closeMenu}
+
+              >
 
                 Web Design & Development
 
               </Link>
 
+             
+              <Link
 
+                to="/services/digital-marketing"
 
-              <Link to="/services/digital-marketing">
+                onClick={closeMenu}
+
+              >
 
                 Digital Marketing
 
               </Link>
 
-              <Link to="/services/hire-developer">
+            
+
+             
+              <Link
+
+                to="/services/hire-developer"
+
+                onClick={closeMenu}
+
+              >
 
                 Hire Developer
 
@@ -131,7 +241,10 @@ function Navbar() {
 
           <li>
 
-            <Link to="/portfolio">
+            <Link
+              to="/portfolio"
+              onClick={closeMenu}
+            >
 
               Portfolio
 
@@ -141,7 +254,10 @@ function Navbar() {
 
           <li>
 
-            <Link to="/blog">
+            <Link
+              to="/blog"
+              onClick={closeMenu}
+            >
 
               Blog
 
@@ -151,7 +267,10 @@ function Navbar() {
 
           <li>
 
-            <Link to="/career">
+            <Link
+              to="/career"
+              onClick={closeMenu}
+            >
 
               Career
 
@@ -161,7 +280,10 @@ function Navbar() {
 
           <li>
 
-            <Link to="/products">
+            <Link
+              to="/products"
+              onClick={closeMenu}
+            >
 
               Products
 
@@ -171,7 +293,10 @@ function Navbar() {
 
           <li>
 
-            <Link to="/events">
+            <Link
+              to="/events"
+              onClick={closeMenu}
+            >
 
               Events
 
@@ -181,7 +306,10 @@ function Navbar() {
 
           <li>
 
-            <Link to="/contact">
+            <Link
+              to="/contact"
+              onClick={closeMenu}
+            >
 
               Contact
 
@@ -201,17 +329,17 @@ function Navbar() {
 
         </ul>
 
-        {/* Mobile Menu */}
+        {/* ================= Mobile Menu ================= */}
 
         <div
 
           className="menu-icon"
 
-          onClick={() =>
+          onClick={() => {
 
-            setMenuOpen(!menuOpen)
+            setMenuOpen(!menuOpen);
 
-          }
+          }}
 
         >
 

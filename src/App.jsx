@@ -5,7 +5,11 @@ import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Portfolio from "./pages/Portfolio";
 import Career from "./pages/Career";
-// import About from "./pages/About";
+
+
+import Offshore from "./pages/service/Offshore";
+import WebDevelopment from "./pages/service/WebDevelopment";
+
 
 
 function App() {
@@ -38,13 +42,13 @@ function App() {
           element={<Career />}
 
         />
-          {/* <Route
+        <Route path="/services/offshore" element={<Offshore />} />
 
-          path="/about"
+        <Route
+          path="/services/web-development"
+          element={<WebDevelopment />}
+        />
 
-          element={<About />}
-
-        /> */}
 
       </Routes>
 

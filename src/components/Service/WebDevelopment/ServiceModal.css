@@ -1,0 +1,731 @@
+/* ==========================================
+   MODAL OVERLAY
+========================================== */
+
+.modalOverlay{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:32px;
+
+background:rgba(15,23,42,.65);
+
+backdrop-filter:blur(10px);
+
+-webkit-backdrop-filter:blur(10px);
+
+overflow-y:auto;
+
+z-index:9999;
+
+}
+
+/* ==========================================
+   MODAL CONTAINER
+========================================== */
+
+.serviceModal{
+
+width:100%;
+
+max-width:1180px;
+
+background:#fff;
+
+border-radius:24px;
+
+overflow:hidden;
+
+box-shadow:
+
+0 35px 80px rgba(15,23,42,.20),
+
+0 12px 25px rgba(37,99,235,.12);
+
+display:flex;
+
+flex-direction:column;
+
+animation:popup .35s ease;
+
+}
+
+/* ==========================================
+   OPEN ANIMATION
+========================================== */
+
+@keyframes popup{
+
+0%{
+
+opacity:0;
+
+transform:translateY(35px) scale(.96);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0) scale(1);
+
+}
+
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.modalHeader{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:22px 34px;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#2563EB,
+
+#06B6D4
+
+);
+
+}
+
+.modalHeader h2{
+
+margin:0;
+
+font-size:30px;
+
+font-weight:700;
+
+line-height:1.3;
+
+color:#fff;
+
+max-width:85%;
+
+}
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.closeBtn{
+
+width:52px;
+
+height:52px;
+
+border:none;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.15);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+cursor:pointer;
+
+transition:.35s;
+
+font-size:20px;
+
+color:#fff;
+
+flex-shrink:0;
+
+}
+
+.closeBtn:hover{
+
+background:#fff;
+
+color:#2563EB;
+
+transform:rotate(90deg);
+
+}
+
+/* ==========================================
+   MODAL BODY
+========================================== */
+
+.modalBody{
+
+display:grid;
+
+grid-template-columns:58% 42%;
+
+align-items:center;
+
+gap:50px;
+
+padding:45px;
+
+background:#fff;
+
+}
+
+/* ==========================================
+   LEFT CONTENT
+========================================== */
+
+.modalLeft{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+height:100%;
+
+}
+
+.modalLeft h3{
+
+font-size:42px;
+
+font-weight:800;
+
+line-height:1.2;
+
+color:#1E293B;
+
+margin:0 0 22px;
+
+letter-spacing:-.5px;
+
+}
+
+.modalLeft p{
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#64748B;
+
+margin:0;
+
+text-align:justify;
+
+}
+
+/* ==========================================
+   RIGHT CONTENT
+========================================== */
+
+.modalRight{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100%;
+
+}
+
+/* ==========================================
+   IMAGE CARD
+========================================== */
+
+.modalRight img{
+
+width:100%;
+
+max-width:430px;
+
+height:320px;
+
+object-fit:cover;
+
+border-radius:22px;
+
+border:6px solid #fff;
+
+box-shadow:
+
+0 20px 45px rgba(37,99,235,.18);
+
+transition:.45s ease;
+
+}
+
+.modalRight img:hover{
+
+transform:scale(1.04);
+
+box-shadow:
+
+0 30px 60px rgba(37,99,235,.28);
+
+}
+
+/* ==========================================
+   LONG CONTENT SUPPORT
+========================================== */
+
+.serviceModal{
+
+max-height:90vh;
+
+}
+
+.modalBody{
+
+overflow-y:auto;
+
+scrollbar-width:thin;
+
+scrollbar-color:#2563EB #EEF4FF;
+
+}
+
+.modalBody::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+.modalBody::-webkit-scrollbar-track{
+
+background:#EEF4FF;
+
+border-radius:20px;
+
+}
+
+.modalBody::-webkit-scrollbar-thumb{
+
+background:#2563EB;
+
+border-radius:20px;
+
+}
+
+/* ==========================================
+   REMOVE FOOTER
+========================================== */
+
+.modalFooter{
+
+display:none;
+
+}
+
+/* ==========================================
+   LARGE LAPTOP (1400px)
+========================================== */
+
+@media (max-width:1400px){
+
+.serviceModal{
+
+max-width:1080px;
+
+}
+
+.modalBody{
+
+gap:40px;
+
+padding:40px;
+
+}
+
+.modalLeft h3{
+
+font-size:38px;
+
+}
+
+.modalRight img{
+
+max-width:390px;
+
+height:290px;
+
+}
+
+}
+
+/* ==========================================
+   LAPTOP (1200px)
+========================================== */
+
+@media (max-width:1200px){
+
+.serviceModal{
+
+max-width:960px;
+
+}
+
+.modalBody{
+
+grid-template-columns:1fr 1fr;
+
+gap:35px;
+
+padding:35px;
+
+}
+
+.modalLeft h3{
+
+font-size:34px;
+
+}
+
+.modalLeft p{
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+.modalRight img{
+
+max-width:340px;
+
+height:260px;
+
+}
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.modalOverlay{
+
+padding:20px;
+
+}
+
+.serviceModal{
+
+max-width:760px;
+
+max-height:92vh;
+
+}
+
+.modalHeader{
+
+padding:18px 24px;
+
+}
+
+.modalHeader h2{
+
+font-size:24px;
+
+}
+
+.closeBtn{
+
+width:46px;
+
+height:46px;
+
+font-size:18px;
+
+}
+
+.modalBody{
+
+grid-template-columns:1fr;
+
+gap:30px;
+
+padding:30px;
+
+text-align:center;
+
+overflow-y:auto;
+
+}
+
+.modalRight{
+
+order:1;
+
+}
+
+.modalLeft{
+
+order:2;
+
+}
+
+.modalLeft h3{
+
+font-size:32px;
+
+}
+
+.modalLeft p{
+
+text-align:center;
+
+font-size:16px;
+
+}
+
+.modalRight img{
+
+max-width:100%;
+
+width:100%;
+
+height:320px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE LANDSCAPE
+========================================== */
+
+@media (max-width:768px){
+
+.modalOverlay{
+
+padding:15px;
+
+}
+
+.serviceModal{
+
+border-radius:18px;
+
+max-height:94vh;
+
+}
+
+.modalHeader{
+
+padding:16px 18px;
+
+}
+
+.modalHeader h2{
+
+font-size:20px;
+
+line-height:1.4;
+
+}
+
+.closeBtn{
+
+width:42px;
+
+height:42px;
+
+font-size:17px;
+
+}
+
+.modalBody{
+
+padding:22px;
+
+gap:22px;
+
+}
+
+.modalLeft h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.modalLeft p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.modalRight img{
+
+height:260px;
+
+border-radius:18px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:576px){
+
+.modalOverlay{
+
+padding:12px;
+
+}
+
+.serviceModal{
+
+border-radius:16px;
+
+}
+
+.modalHeader{
+
+padding:15px;
+
+}
+
+.modalHeader h2{
+
+font-size:18px;
+
+max-width:80%;
+
+}
+
+.closeBtn{
+
+width:40px;
+
+height:40px;
+
+font-size:16px;
+
+}
+
+.modalBody{
+
+padding:18px;
+
+gap:18px;
+
+}
+
+.modalLeft h3{
+
+font-size:24px;
+
+}
+
+.modalLeft p{
+
+font-size:14px;
+
+line-height:1.7;
+
+}
+
+.modalRight img{
+
+height:220px;
+
+}
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width:400px){
+
+.modalOverlay{
+
+padding:8px;
+
+}
+
+.modalHeader{
+
+padding:14px;
+
+}
+
+.modalHeader h2{
+
+font-size:17px;
+
+}
+
+.closeBtn{
+
+width:36px;
+
+height:36px;
+
+font-size:15px;
+
+}
+
+.modalBody{
+
+padding:16px;
+
+}
+
+.modalLeft h3{
+
+font-size:21px;
+
+}
+
+.modalLeft p{
+
+font-size:13.5px;
+
+line-height:1.65;
+
+}
+
+.modalRight img{
+
+height:190px;
+
+border-radius:14px;
+
+}
+
+}

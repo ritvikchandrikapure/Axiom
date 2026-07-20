@@ -1,0 +1,354 @@
+/* ==========================================
+   OFFSHORE HERO
+========================================== */
+
+.offshoreHero{
+
+position:relative;
+
+width:100%;
+
+min-height:340px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+margin-top:90px;
+
+padding:90px 20px;
+
+background:#F8FBFF;
+
+}
+
+/* ================= Overlay ================= */
+.heroOverlay{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(circle at top left,
+rgba(37,99,235,.12),
+transparent 40%),
+
+radial-gradient(circle at bottom right,
+rgba(6,182,212,.15),
+transparent 40%),
+
+linear-gradient(
+135deg,
+#F8FBFF 0%,
+#EEF6FF 50%,
+#F7FBFF 100%
+);
+
+z-index:1;
+
+}
+/* ================= Container ================= */
+
+.heroContainer{
+
+width:100%;
+
+max-width:1400px;
+
+padding:0 20px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+position:relative;
+
+z-index:2;
+
+}
+
+/* ================= Content ================= */
+
+.heroContent{
+
+max-width:900px;
+
+text-align:center;
+
+color:#fff;
+
+}
+
+
+
+/* ================= Heading ================= */
+
+.heroContent h1{
+
+font-size:70px;
+
+font-weight:800;
+
+color:#1E293B;
+
+letter-spacing:1px;
+
+margin-bottom:18px;
+
+text-transform:uppercase;
+
+}
+
+
+
+/* ================= Paragraph ================= */
+.heroContent p{
+
+max-width:780px;
+
+margin:auto;
+
+font-size:22px;
+
+line-height:1.7;
+
+color:#64748B;
+
+}
+.blob{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(120px);
+
+pointer-events:none;
+
+z-index:0;
+
+animation:floatBlob 8s ease-in-out infinite;
+
+}
+
+.blob1{
+
+width:340px;
+
+height:340px;
+
+background:rgba(37,99,235,.18);
+
+top:-100px;
+
+left:-100px;
+
+}
+
+.blob2{
+
+width:320px;
+
+height:320px;
+
+background:rgba(6,182,212,.18);
+
+right:-80px;
+
+bottom:-120px;
+
+}
+/* ================= Buttons ================= */
+
+
+
+
+.primaryBtn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 15px 40px rgba(37,99,235,.35);
+
+}
+
+
+.secondaryBtn:hover{
+
+background:#fff;
+
+color:#111827;
+
+}
+/* ===========================
+   992px
+=========================== */
+
+@media(max-width:992px){
+
+.offshoreHero{
+
+height:380px;
+
+margin-top:80px;
+
+}
+
+.heroContent h1{
+
+font-size:52px;
+
+}
+
+.heroContent p{
+
+font-size:18px;
+
+}
+
+}
+
+/* ===========================
+   768px
+=========================== */
+
+@media(max-width:768px){
+
+.offshoreHero{
+
+height:340px;
+
+padding:20px;
+
+}
+
+.heroContent h1{
+
+font-size:40px;
+
+}
+
+.heroContent p{
+
+font-size:16px;
+
+line-height:1.7;
+
+}
+
+.heroButtons{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+.primaryBtn,
+
+.secondaryBtn{
+
+width:100%;
+
+max-width:300px;
+
+text-align:center;
+
+}
+
+}
+
+/* ===========================
+   480px
+=========================== */
+
+@media(max-width:480px){
+
+.offshoreHero{
+
+height:320px;
+
+}
+
+.heroTag{
+
+font-size:12px;
+
+}
+
+.heroContent h1{
+
+font-size:32px;
+
+}
+
+.heroContent p{
+
+font-size:15px;
+
+}
+
+}
+
+@keyframes floatBlob{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-20px);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.offshoreHero{
+
+padding:70px 20px;
+
+min-height:280px;
+
+}
+
+.heroContent h1{
+
+font-size:42px;
+
+}
+
+.heroContent p{
+
+font-size:17px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.heroContent h1{
+
+font-size:32px;
+
+}
+
+.heroContent p{
+
+font-size:15px;
+
+}
+
+}
