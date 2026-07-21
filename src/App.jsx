@@ -10,11 +10,14 @@ import Career from "./pages/Career";
 import Offshore from "./pages/service/Offshore";
 import WebDevelopment from "./pages/service/WebDevelopment";
 
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+
 
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
 
       <Routes>
 
