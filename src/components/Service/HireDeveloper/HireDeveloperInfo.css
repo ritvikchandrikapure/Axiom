@@ -1,0 +1,170 @@
+/* ==========================================
+   Hire Developer Info
+========================================== */
+
+.hireInfoSection{
+
+padding:80px 20px;
+
+background:#F8FBFF;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.hireInfoCard{
+
+max-width:1200px;
+
+width:100%;
+
+padding:45px;
+
+border-radius:24px;
+
+background:
+linear-gradient(
+135deg,
+rgba(255,255,255,.95),
+rgba(240,247,255,.95)
+);
+
+border:1px solid rgba(37,99,235,.12);
+
+border-left:8px solid #2563EB;
+
+box-shadow:
+0 20px 50px rgba(15,23,42,.08);
+
+position:relative;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+.hireInfoCard::before{
+
+content:"";
+
+position:absolute;
+
+width:280px;
+
+height:280px;
+
+background:rgba(37,99,235,.08);
+
+border-radius:50%;
+
+top:-120px;
+
+right:-120px;
+
+filter:blur(30px);
+
+}
+
+.hireInfoCard:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 30px 70px rgba(37,99,235,.15);
+
+}
+
+.hireInfoCard p{
+
+position:relative;
+
+z-index:2;
+
+font-size:22px;
+
+line-height:2;
+
+color:#475569;
+
+margin:0;
+
+}
+
+.hireInfoCard strong{
+
+color:#1E40AF;
+
+font-weight:700;
+
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.hireInfoCard{
+
+padding:35px;
+
+}
+
+.hireInfoCard p{
+
+font-size:19px;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hireInfoSection{
+
+padding:60px 20px;
+
+}
+
+.hireInfoCard{
+
+padding:28px;
+
+border-left:6px solid #2563EB;
+
+}
+
+.hireInfoCard p{
+
+font-size:16px;
+
+line-height:1.9;
+
+}
+
+}
+
+/* Small Mobile */
+
+@media(max-width:480px){
+
+.hireInfoCard{
+
+padding:22px;
+
+border-radius:18px;
+
+}
+
+.hireInfoCard p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+}

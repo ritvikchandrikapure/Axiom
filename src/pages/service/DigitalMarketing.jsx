@@ -1,15 +1,16 @@
-import WebHero from "../../components/Service/WebDevelopment/WebHero";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import WebOverview from "../../components/Service/WebDevelopment/WebOverview";
-import WebDevelopmentServices from "../../components/Service/WebDevelopment/WebDevelopmentServices";
-
 import OffshoreStats from "../../components/Service/Offshore/OffshoreStats";
 import Trusted from "../../components/Trusted/Trusted";
+import DigitalHero from "../../components/Service/DigitalMarketing/DigitalHero";
+import DigitalOverview from "../../components/Service/DigitalMarketing/DigitalOverview";
+import DigitalMarketingServices from "../../components/Service/DigitalMarketing/DigitalMarketingServices";
 
 
 
-function WebDevelopment() {
+
+
+function DigitalMarketing() {
 
   return (
 
@@ -17,10 +18,10 @@ function WebDevelopment() {
       <Navbar />
 
 
-      <WebHero />
-      <WebOverview />
-      <WebDevelopmentServices/>
-
+     
+<DigitalHero/>
+<DigitalOverview/>
+<DigitalMarketingServices/>
 
       <OffshoreStats />
       <Trusted />
@@ -36,4 +37,4 @@ function WebDevelopment() {
 
 }
 
-export default WebDevelopment;
+export default DigitalMarketing;

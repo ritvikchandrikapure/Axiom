@@ -8,7 +8,9 @@ position:relative;
 
 width:100%;
 
-min-height:340px;
+margin-top:50px;
+
+min-height:calc(100vh - 90px);
 
 display:flex;
 
@@ -16,17 +18,18 @@ justify-content:center;
 
 align-items:center;
 
+padding:40px 20px;
+
 overflow:hidden;
-
-margin-top:90px;
-
-padding:90px 20px;
 
 background:#F8FBFF;
 
 }
 
-/* ================= Overlay ================= */
+/* ==========================================
+   Background Overlay
+========================================== */
+
 .heroOverlay{
 
 position:absolute;
@@ -40,20 +43,23 @@ rgba(37,99,235,.12),
 transparent 40%),
 
 radial-gradient(circle at bottom right,
-rgba(6,182,212,.15),
-transparent 40%),
+rgba(6,182,212,.14),
+transparent 45%),
 
 linear-gradient(
 135deg,
 #F8FBFF 0%,
-#EEF6FF 50%,
-#F7FBFF 100%
+#EEF6FF 55%,
+#F9FCFF 100%
 );
 
 z-index:1;
 
 }
-/* ================= Container ================= */
+
+/* ==========================================
+   Container
+========================================== */
 
 .heroContainer{
 
@@ -61,7 +67,7 @@ width:100%;
 
 max-width:1400px;
 
-padding:0 20px;
+height:100%;
 
 display:flex;
 
@@ -75,54 +81,58 @@ z-index:2;
 
 }
 
-/* ================= Content ================= */
+/* ==========================================
+   Content
+========================================== */
 
 .heroContent{
+
+width:100%;
 
 max-width:900px;
 
 text-align:center;
 
-color:#fff;
+margin:auto;
 
 }
 
-
-
-/* ================= Heading ================= */
-
 .heroContent h1{
 
-font-size:70px;
+font-size:72px;
 
 font-weight:800;
 
-color:#1E293B;
+line-height:1.1;
 
 letter-spacing:1px;
 
-margin-bottom:18px;
+color:#1E293B;
+
+margin-bottom:24px;
 
 text-transform:uppercase;
 
 }
 
-
-
-/* ================= Paragraph ================= */
 .heroContent p{
 
-max-width:780px;
+max-width:760px;
 
 margin:auto;
 
 font-size:22px;
 
-line-height:1.7;
+line-height:1.8;
 
 color:#64748B;
 
 }
+
+/* ==========================================
+   Floating Blobs
+========================================== */
+
 .blob{
 
 position:absolute;
@@ -147,9 +157,9 @@ height:340px;
 
 background:rgba(37,99,235,.18);
 
-top:-100px;
+top:-120px;
 
-left:-100px;
+left:-120px;
 
 }
 
@@ -161,139 +171,9 @@ height:320px;
 
 background:rgba(6,182,212,.18);
 
-right:-80px;
-
 bottom:-120px;
 
-}
-/* ================= Buttons ================= */
-
-
-
-
-.primaryBtn:hover{
-
-transform:translateY(-4px);
-
-box-shadow:0 15px 40px rgba(37,99,235,.35);
-
-}
-
-
-.secondaryBtn:hover{
-
-background:#fff;
-
-color:#111827;
-
-}
-/* ===========================
-   992px
-=========================== */
-
-@media(max-width:992px){
-
-.offshoreHero{
-
-height:380px;
-
-margin-top:80px;
-
-}
-
-.heroContent h1{
-
-font-size:52px;
-
-}
-
-.heroContent p{
-
-font-size:18px;
-
-}
-
-}
-
-/* ===========================
-   768px
-=========================== */
-
-@media(max-width:768px){
-
-.offshoreHero{
-
-height:340px;
-
-padding:20px;
-
-}
-
-.heroContent h1{
-
-font-size:40px;
-
-}
-
-.heroContent p{
-
-font-size:16px;
-
-line-height:1.7;
-
-}
-
-.heroButtons{
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-.primaryBtn,
-
-.secondaryBtn{
-
-width:100%;
-
-max-width:300px;
-
-text-align:center;
-
-}
-
-}
-
-/* ===========================
-   480px
-=========================== */
-
-@media(max-width:480px){
-
-.offshoreHero{
-
-height:320px;
-
-}
-
-.heroTag{
-
-font-size:12px;
-
-}
-
-.heroContent h1{
-
-font-size:32px;
-
-}
-
-.heroContent p{
-
-font-size:15px;
-
-}
+right:-120px;
 
 }
 
@@ -307,19 +187,75 @@ transform:translateY(0);
 
 50%{
 
-transform:translateY(-20px);
+transform:translateY(-18px);
 
 }
 
 }
 
-@media(max-width:768px){
+/* ==========================================
+   Large Tablet
+========================================== */
+
+@media (max-width:1200px){
+
+.heroContent h1{
+
+font-size:64px;
+
+}
+
+.heroContent p{
+
+font-size:20px;
+
+max-width:680px;
+
+}
+
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media (max-width:992px){
 
 .offshoreHero{
 
-padding:70px 20px;
+margin-top:80px;
 
-min-height:280px;
+padding:100px 20px;
+
+}
+
+.heroContent h1{
+
+font-size:54px;
+
+}
+
+.heroContent p{
+
+font-size:19px;
+
+max-width:620px;
+
+}
+
+}
+
+/* ==========================================
+   Small Tablet
+========================================== */
+
+@media (max-width:768px){
+
+.offshoreHero{
+
+margin-top:75px;
+
+padding:80px 20px;
 
 }
 
@@ -327,27 +263,131 @@ min-height:280px;
 
 font-size:42px;
 
+margin-bottom:18px;
+
 }
 
 .heroContent p{
 
 font-size:17px;
 
-}
+line-height:1.7;
 
 }
 
-@media(max-width:480px){
+.blob1{
+
+width:220px;
+
+height:220px;
+
+top:-60px;
+
+left:-60px;
+
+}
+
+.blob2{
+
+width:220px;
+
+height:220px;
+
+right:-60px;
+
+bottom:-60px;
+
+}
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+@media (max-width:480px){
+
+.offshoreHero{
+
+margin-top:70px;
+
+min-height:auto;
+
+padding:50px 18px;
+
+}
 
 .heroContent h1{
 
 font-size:32px;
+
+margin-bottom:14px;
 
 }
 
 .heroContent p{
 
 font-size:15px;
+
+line-height:1.6;
+
+max-width:280px;
+
+}
+
+}
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media (max-width:360px){
+
+.heroContent h1{
+
+font-size:28px;
+
+}
+
+.heroContent p{
+
+font-size:14px;
+
+}
+
+}
+@media (max-width:768px){
+
+.offshoreHero{
+
+margin-top:72px;
+
+min-height:auto;
+
+padding:60px 20px;
+
+}
+
+
+.heroContainer{
+
+min-height:auto;
+
+}
+
+.heroContent h1{
+
+font-size:42px;
+
+margin-bottom:16px;
+
+}
+
+.heroContent p{
+
+font-size:17px;
+
+line-height:1.7;
+
+max-width:320px;
 
 }
 

@@ -1,0 +1,580 @@
+/* ==========================================
+   DIGITAL OVERVIEW
+========================================== */
+
+.digitalOverview{
+
+position:relative;
+
+padding:110px 20px;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#F8FBFF 0%,
+
+#EEF6FF 50%,
+
+#FFFFFF 100%
+
+);
+
+overflow:hidden;
+
+}
+
+/* ==========================================
+   BACKGROUND SHAPES
+========================================== */
+
+.digitalOverview::before{
+
+content:"";
+
+position:absolute;
+
+width:420px;
+
+height:420px;
+
+left:-180px;
+
+top:-120px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(37,99,235,.12),
+
+transparent 70%
+
+);
+
+filter:blur(20px);
+
+}
+
+.digitalOverview::after{
+
+content:"";
+
+position:absolute;
+
+width:350px;
+
+height:350px;
+
+right:-120px;
+
+bottom:-100px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(6,182,212,.10),
+
+transparent 70%
+
+);
+
+filter:blur(20px);
+
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.overviewContainer{
+
+position:relative;
+
+z-index:2;
+
+max-width:1350px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:480px 1fr;
+
+gap:60px;
+
+align-items:center;
+
+padding:45px;
+
+border-radius:30px;
+
+background:
+
+rgba(255,255,255,.82);
+
+backdrop-filter:blur(14px);
+
+box-shadow:
+
+0 20px 60px rgba(37,99,235,.10);
+
+border:1px solid rgba(37,99,235,.08);
+
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.overviewImage{
+
+position:relative;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.overviewImage img{
+
+width:100%;
+
+max-width:460px;
+
+border-radius:22px;
+
+box-shadow:
+
+0 20px 45px rgba(37,99,235,.18);
+
+transition:.5s;
+
+}
+
+.overviewImage img:hover{
+
+transform:translateY(-8px) scale(1.03);
+
+box-shadow:
+
+0 30px 60px rgba(37,99,235,.22);
+
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.overviewContent{
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.overviewContent h2{
+
+font-size:48px;
+
+font-weight:800;
+
+line-height:1.2;
+
+color:#1E293B;
+
+margin:0 0 25px;
+
+max-width:700px;
+
+}
+
+/* ==========================================
+   PARAGRAPH
+========================================== */
+
+.overviewContent p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#64748B;
+
+margin-bottom:35px;
+
+}
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.overviewPoints{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:18px 30px;
+
+margin-bottom:40px;
+
+}
+
+.overviewPoints div{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+font-size:17px;
+
+font-weight:600;
+
+color:#334155;
+
+padding:12px 16px;
+
+background:#F8FBFF;
+
+border-radius:14px;
+
+transition:.35s;
+
+cursor:pointer;
+
+border:1px solid transparent;
+
+}
+
+.overviewPoints div svg{
+
+font-size:18px;
+
+color:#2563EB;
+
+flex-shrink:0;
+
+}
+
+.overviewPoints div:hover{
+
+background:#2563EB;
+
+color:#fff;
+
+border-color:#2563EB;
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 12px 25px rgba(37,99,235,.18);
+
+}
+
+.overviewPoints div:hover svg{
+
+color:#fff;
+
+}
+
+
+/* ==========================================
+   FLOAT ANIMATION
+========================================== */
+
+@keyframes floatImage{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+.overviewImage img{
+
+animation:floatImage 5s ease-in-out infinite;
+
+}
+
+/* ==========================================
+   LARGE DESKTOP
+========================================== */
+
+@media (max-width:1400px){
+
+.overviewContainer{
+
+grid-template-columns:430px 1fr;
+
+gap:50px;
+
+}
+
+.overviewContent h2{
+
+font-size:42px;
+
+}
+
+}
+
+/* ==========================================
+   LAPTOP
+========================================== */
+
+@media (max-width:1200px){
+
+.digitalOverview{
+
+padding:90px 20px;
+
+}
+
+.overviewContainer{
+
+grid-template-columns:380px 1fr;
+
+gap:40px;
+
+padding:35px;
+
+}
+
+.overviewImage img{
+
+max-width:360px;
+
+}
+
+.overviewContent h2{
+
+font-size:36px;
+
+}
+
+.overviewContent p{
+
+font-size:17px;
+
+}
+
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width:992px){
+
+.overviewContainer{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+padding:35px;
+
+gap:40px;
+
+}
+
+.overviewImage{
+
+order:1;
+
+}
+
+.overviewContent{
+
+order:2;
+
+align-items:center;
+
+}
+.overviewContent h2{
+
+font-size:34px;
+
+}
+
+.overviewContent p{
+
+font-size:16px;
+
+max-width:700px;
+
+}
+
+.overviewPoints{
+
+grid-template-columns:1fr 1fr;
+
+width:100%;
+
+}
+
+.overviewContent button{
+
+margin:auto;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+.digitalOverview{
+
+padding:80px 18px;
+
+}
+
+.overviewContainer{
+
+padding:25px;
+
+border-radius:22px;
+
+}
+
+.overviewContent h2{
+
+font-size:30px;
+
+}
+
+.overviewContent p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+.overviewImage img{
+
+max-width:100%;
+
+}
+
+.overviewPoints{
+
+grid-template-columns:1fr;
+
+gap:15px;
+
+}
+
+.overviewPoints div{
+
+font-size:15px;
+
+padding:14px;
+
+}
+
+.overviewContent button{
+
+width:100%;
+
+max-width:280px;
+
+padding:15px 20px;
+
+}
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width:480px){
+
+.digitalOverview{
+
+padding:70px 15px;
+
+}
+
+.overviewContainer{
+
+padding:20px;
+
+}
+
+
+
+.overviewContent h2{
+
+font-size:25px;
+
+}
+
+.overviewContent p{
+
+font-size:14px;
+
+}
+
+.overviewPoints div{
+
+font-size:14px;
+
+padding:12px;
+
+}
+
+.overviewContent button{
+
+font-size:15px;
+
+padding:14px 18px;
+
+}
+
+}

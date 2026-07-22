@@ -1,0 +1,357 @@
+/* ==========================================
+   HIRE CTA
+========================================== */
+
+.hireCTA {
+
+    padding: 100px 20px;
+
+    background: #F8FBFF;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+/* ========================= */
+
+.ctaCard {
+
+    position: relative;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 70px 50px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(135deg,
+            #FFFFFF 0%,
+            #F5FAFF 40%,
+            #EEF7FF 100%);
+
+    border: 1px solid rgba(37, 99, 235, .12);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 20px 50px rgba(37, 99, 235, .10);
+
+    overflow: hidden;
+
+    transition: .4s;
+
+}
+
+.ctaCard:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 35px 80px rgba(37, 99, 235, .18);
+
+}
+
+/* ===========================
+   Decorative Background
+=========================== */
+
+.ctaCard::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 340px;
+
+    height: 340px;
+
+    border-radius: 50%;
+
+    background: rgba(37, 99, 235, .12);
+
+    top: -170px;
+
+    left: -170px;
+
+    filter: blur(60px);
+
+    animation: floatGlow 10s ease-in-out infinite;
+
+}
+
+.ctaCard::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(6, 182, 212, .12);
+
+    bottom: -150px;
+
+    right: -150px;
+
+    filter: blur(60px);
+
+    animation: floatGlow 12s ease-in-out infinite;
+
+}
+
+
+
+/* ========================= */
+
+.ctaCard h2 {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 48px;
+
+    font-weight: 800;
+
+    line-height: 1.25;
+
+    color: #1E293B;
+
+    margin-bottom: 24px;
+
+}
+
+/* ========================= */
+
+.ctaCard p {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+
+    margin: auto;
+
+    font-size: 21px;
+
+    line-height: 1.8;
+
+    color: #64748B;
+
+    margin-bottom: 40px;
+
+}
+
+/* ========================= */
+
+.ctaBtn {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 18px 42px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            #2563EB,
+            #06B6D4);
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, .25);
+
+    transition: .35s;
+
+}
+
+.ctaBtn:hover {
+
+    transform: translateY(-5px) scale(1.05);
+
+    color: #fff;
+
+    box-shadow:
+        0 18px 40px rgba(37, 99, 235, .35);
+
+}
+
+/* ========================= */
+
+@keyframes floatGlow {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-20px);
+
+    }
+
+}
+
+/* ===========================
+   1200px
+=========================== */
+
+@media(max-width:1200px) {
+
+    .ctaCard h2 {
+
+        font-size: 42px;
+
+    }
+
+}
+
+/* ===========================
+   992px
+=========================== */
+
+@media(max-width:992px) {
+
+    .hireCTA {
+
+        padding: 80px 20px;
+
+    }
+
+    .ctaCard {
+
+        padding: 60px 35px;
+
+    }
+
+    .ctaCard h2 {
+
+        font-size: 36px;
+
+    }
+
+    .ctaCard p {
+
+        font-size: 18px;
+
+    }
+
+}
+
+/* ===========================
+   768px
+=========================== */
+
+@media(max-width:768px) {
+
+    .hireCTA {
+
+        padding: 70px 20px;
+
+    }
+
+    .ctaCard {
+
+        padding: 50px 25px;
+
+    }
+
+
+
+    .ctaCard h2 {
+
+        font-size: 30px;
+
+    }
+
+    .ctaCard p {
+
+        font-size: 16px;
+
+        line-height: 1.7;
+
+    }
+
+    .ctaBtn {
+
+        width: 100%;
+
+        max-width: 260px;
+
+        padding: 16px;
+
+        font-size: 16px;
+
+    }
+
+}
+
+/* ===========================
+   480px
+=========================== */
+
+@media(max-width:480px) {
+
+    .ctaCard {
+
+        padding: 40px 20px;
+
+        border-radius: 20px;
+
+    }
+
+    .ctaCard h2 {
+
+        font-size: 24px;
+
+    }
+
+    .ctaCard p {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+    }
+
+    .ctaBtn {
+
+        max-width: 220px;
+
+        font-size: 15px;
+
+        padding: 15px;
+
+    }
+
+}

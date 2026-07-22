@@ -122,11 +122,7 @@ function Trusted(){
 
       <div className="trusted-title">
 
-        <span>
-
-          TECHNOLOGIES WE WORK WITH
-
-        </span>
+      
 
         <h2>
 

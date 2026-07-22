@@ -1,0 +1,301 @@
+/* ==========================================
+   HIRE PROCESS
+========================================== */
+
+.hireProcess{
+
+padding:90px 20px;
+
+background:#F8FBFF;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* ========================= */
+
+.processContainer{
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+/* ========================= */
+
+.processTitle{
+
+font-size:48px;
+
+font-weight:800;
+
+text-align:center;
+
+color:#1E293B;
+
+margin-bottom:60px;
+
+}
+
+/* ========================= */
+
+.accordionWrapper{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+/* ========================= */
+
+.accordionItem{
+
+background:#fff;
+
+border-radius:18px;
+
+overflow:hidden;
+
+border:1px solid rgba(37,99,235,.15);
+
+box-shadow:
+
+0 10px 30px rgba(15,23,42,.06);
+
+transition:.35s;
+
+}
+
+.accordionItem:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 20px 45px rgba(37,99,235,.18);
+
+}
+
+/* Active */
+
+.accordionItem.active{
+
+border-color:#2563EB;
+
+box-shadow:
+
+0 0 0 1px rgba(37,99,235,.15),
+
+0 20px 50px rgba(37,99,235,.18);
+
+}
+
+/* ========================= */
+
+.accordionHeader{
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:28px 30px;
+
+cursor:pointer;
+
+background:transparent;
+
+border:none;
+
+outline:none;
+
+font-size:22px;
+
+font-weight:500;
+
+color:#1E293B;
+
+text-align:left;
+
+transition:.3s;
+
+}
+
+.accordionHeader:hover{
+
+background:#F7FAFF;
+
+}
+
+.accordionHeader strong{
+
+color:#2563EB;
+
+font-weight:700;
+
+}
+
+/* ========================= */
+
+.arrow{
+
+font-size:18px;
+
+color:#2563EB;
+
+transition:.35s;
+
+flex-shrink:0;
+
+}
+
+.rotate{
+
+transform:rotate(180deg);
+
+}
+
+/* ========================= */
+
+.accordionBody{
+
+overflow:hidden;
+
+}
+
+.accordionBody p{
+
+padding:0 30px 30px;
+
+margin:0;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#64748B;
+
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@media(max-width:992px){
+
+.processTitle{
+
+font-size:38px;
+
+margin-bottom:45px;
+
+}
+
+.accordionHeader{
+
+font-size:19px;
+
+padding:24px;
+
+}
+
+.accordionBody p{
+
+padding:0 24px 24px;
+
+font-size:17px;
+
+}
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media(max-width:768px){
+
+.hireProcess{
+
+padding:70px 18px;
+
+}
+
+.processTitle{
+
+font-size:30px;
+
+line-height:1.4;
+
+}
+
+.accordionHeader{
+
+padding:20px;
+
+font-size:17px;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.arrow{
+
+margin-top:5px;
+
+}
+
+.accordionBody p{
+
+padding:0 20px 20px;
+
+font-size:16px;
+
+line-height:1.8;
+
+}
+
+}
+
+/* ==========================================
+   Small Mobile
+========================================== */
+
+@media(max-width:480px){
+
+.processTitle{
+
+font-size:26px;
+
+}
+
+.accordionHeader{
+
+font-size:15px;
+
+padding:18px;
+
+}
+
+.accordionBody p{
+
+padding:0 18px 18px;
+
+font-size:15px;
+
+line-height:1.7;
+
+}
+
+}

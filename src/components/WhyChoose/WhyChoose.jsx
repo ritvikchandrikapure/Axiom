@@ -97,7 +97,6 @@ function WhyChoose() {
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
       >
-        <span>WHY CHOOSE US</span>
 
         <h2>
           Why Partner With
