@@ -14,6 +14,8 @@ import HireDeveloper from "./pages/service/HireDeveloper";
 
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
+import VoiceAssistant from "./components/VoiceAssistant/VoiceAssistant";
+
 function App() {
   return (
     <BrowserRouter>
@@ -30,6 +32,8 @@ function App() {
         <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
         <Route path="/services/hire-developer" element={<HireDeveloper />} />
       </Routes>
+      <VoiceAssistant />
+
     </BrowserRouter>
   );
 }

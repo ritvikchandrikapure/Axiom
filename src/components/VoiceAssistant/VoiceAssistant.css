@@ -1,0 +1,233 @@
+/* ===============================
+   FLOATING MICROPHONE
+================================ */
+
+.voice-floating-button {
+  position: fixed;
+
+  left: 30px;
+  bottom: 30px;
+
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #246bfe,
+    #00b8d9
+  );
+
+  color: white;
+
+  font-size: 27px;
+
+  cursor: pointer;
+
+  z-index: 99999;
+
+  box-shadow:
+    0 8px 30px rgba(36, 107, 254, 0.4);
+
+  transition: 0.3s;
+}
+
+
+.voice-floating-button:hover {
+  transform: scale(1.08);
+}
+
+
+.voice-floating-button.active {
+  animation: buttonPulse 1.2s infinite;
+}
+
+
+@keyframes buttonPulse {
+
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(36, 107, 254, 0.5);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 20px rgba(36, 107, 254, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(36, 107, 254, 0);
+  }
+
+}
+
+
+/* ===============================
+   SMALL VOICE POPUP
+================================ */
+
+.voice-mini-popup {
+  position: fixed;
+
+  left: 30px;
+  bottom: 115px;
+
+  width: 245px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 14px 17px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border: 1px solid #e5eaf3;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.15);
+
+  z-index: 99999;
+
+  animation: popupOpen 0.25s ease;
+}
+
+
+@keyframes popupOpen {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(10px)
+      scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* ===============================
+   MINI MICROPHONE
+================================ */
+
+.mini-mic {
+  width: 45px;
+  height: 45px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #246bfe,
+    #00aee8
+  );
+
+  color: white;
+
+  font-size: 19px;
+}
+
+
+.mini-mic.listening {
+  animation: micPulse 1.2s infinite;
+}
+
+
+@keyframes micPulse {
+
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(36, 107, 254, 0.5);
+  }
+
+  70% {
+    box-shadow:
+      0 0 0 12px rgba(36, 107, 254, 0);
+  }
+
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(36, 107, 254, 0);
+  }
+
+}
+
+
+/* ===============================
+   POPUP TEXT
+================================ */
+
+.mini-popup-text {
+  text-align: left;
+}
+
+
+.mini-popup-text h4 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+
+.mini-popup-text p {
+  margin: 3px 0 0;
+
+  color: #7c8799;
+
+  font-size: 12px;
+}
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 500px) {
+
+  .voice-floating-button {
+    left: 20px;
+    bottom: 20px;
+
+    width: 58px;
+    height: 58px;
+
+    font-size: 23px;
+  }
+
+
+  .voice-mini-popup {
+    left: 20px;
+    bottom: 95px;
+
+    width: 220px;
+  }
+
+}
