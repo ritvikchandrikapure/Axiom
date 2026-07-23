@@ -1,0 +1,269 @@
+.liveSection {
+
+    padding: 100px 20px;
+
+    background: linear-gradient(180deg,
+            #F8FBFF,
+            #EEF6FF);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+/* Floating Background */
+
+.liveSection::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+
+    height: 350px;
+
+    background: #2563eb18;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    top: -120px;
+
+    left: -100px;
+
+}
+
+.liveSection::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+
+    height: 320px;
+
+    background: #60a5fa18;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    bottom: -120px;
+
+    right: -80px;
+
+}
+
+/* Card */
+
+.liveCard {
+
+    max-width: 680px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 50px 40px;
+
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, .75);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, .8);
+
+    box-shadow:
+        0 20px 60px rgba(37, 99, 235, .08);
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/* Badge */
+
+.liveBadge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #FFE9E9;
+
+    color: #DC2626;
+
+    padding: 10px 20px;
+
+    border-radius: 50px;
+
+    font-size: .9rem;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    margin-bottom: 28px;
+
+}
+
+.dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #EF4444;
+
+    animation: pulse 1.4s infinite;
+
+}
+
+@keyframes pulse {
+
+    0% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        transform: scale(1.5);
+
+        opacity: .4;
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+/* Heading */
+
+.liveCard h2 {
+
+    font-size: clamp(2rem, 4vw, 3.3rem);
+
+    line-height: 1.15;
+
+    margin-bottom: 18px;
+    color: #111827;
+
+
+    font-weight: 700;
+
+}
+
+/* Paragraph */
+
+.liveCard p {
+
+    font-size: 1.08rem;
+
+    color: #6B7280;
+
+    line-height: 1.9;
+
+    max-width: 620px;
+
+    margin: 0 auto 40px;
+
+}
+
+/* Button */
+
+.youtubeButton {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    border: none;
+
+    cursor: pointer;
+
+    background: #FF3131;
+
+    color: #fff;
+
+    padding: 18px 40px;
+
+    border-radius: 60px;
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    transition: .35s;
+
+}
+
+.youtubeButton svg {
+
+    font-size: 1.4rem;
+
+}
+
+.youtubeButton:hover {
+
+    transform: translateY(-6px);
+
+    background: #E60000;
+
+    box-shadow:
+        0 15px 35px rgba(255, 49, 49, .35);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+    .liveCard {
+
+        padding: 50px 25px;
+
+    }
+
+    .liveCard h2 {
+
+        font-size: 2.3rem;
+
+    }
+
+    .liveCard p {
+
+        font-size: 1rem;
+
+    }
+
+    .youtubeButton {
+
+        padding: 16px 28px;
+
+        font-size: 1rem;
+
+    }
+
+}

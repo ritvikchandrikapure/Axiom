@@ -1,0 +1,401 @@
+/*==========================
+        EVENT HERO
+===========================*/
+
+.eventHero{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top left,#EEF6FF 0%,transparent 45%),
+        radial-gradient(circle at bottom right,#DFF3FF 0%,transparent 35%),
+        linear-gradient(135deg,#F8FBFF 0%,#F2F8FF 45%,#EDF7FF 100%);
+
+}
+
+/*==========================
+        OVERLAY
+===========================*/
+
+.eventHeroOverlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(90deg,
+
+            rgba(255, 255, 255, .15),
+
+            rgba(255, 255, 255, .05));
+
+    pointer-events: none;
+
+}
+
+/*==========================
+      PATTERN LAYER
+===========================*/
+
+.eventHeroPattern {
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        radial-gradient(circle,
+            rgba(37, 99, 235, .08) 2px,
+            transparent 2px);
+
+    background-size: 70px 70px;
+
+    opacity: .8;
+
+}
+
+/*==========================
+      CONTAINER
+===========================*/
+
+.eventHeroContainer{
+
+    position:relative;
+
+    z-index:5;
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+    min-height:90vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.eventHeroContent{
+
+    max-width:900px;
+
+    width:100%;
+
+    text-align:center;
+
+}
+
+
+/*==========================
+         HEADING
+===========================*/
+
+.eventHeroContent h1{
+
+    color:#1E293B;
+
+    font-size:clamp(3.8rem,8vw,6.5rem);
+
+    line-height:1.05;
+
+    font-weight:800;
+
+    margin-bottom:30px;
+
+    text-transform:uppercase;
+
+    letter-spacing:-3px;
+
+}
+
+.eventHeroContent h1 span {
+
+    background: linear-gradient(90deg,
+            #2563EB,
+            #0EA5E9);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+/*==========================
+      DESCRIPTION
+===========================*/
+
+.eventHeroContent p{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    color:#64748B;
+
+    font-size:1.25rem;
+
+    line-height:1.8;
+
+}
+
+/*==========================
+      BUTTON GROUP
+===========================*/
+
+.eventHeroButtons {
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+/*==========================
+      PRIMARY BUTTON
+===========================*/
+
+.eventPrimaryBtn {
+
+    padding: 16px 34px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, #2563EB, #38BDF8);
+
+    color: #fff;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+    box-shadow: 0 12px 30px rgba(37, 99, 235, .35);
+
+}
+
+.eventPrimaryBtn:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 18px 40px rgba(37, 99, 235, .45);
+
+}
+
+/*==========================
+     SECONDARY BUTTON
+===========================*/
+
+.eventSecondaryBtn {
+
+    padding: 16px 34px;
+
+    border-radius: 50px;
+
+    border: 1px solid rgba(255, 255, 255, .25);
+
+    background: rgba(255, 255, 255, .08);
+
+    backdrop-filter: blur(15px);
+
+    color: #fff;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+}
+
+.eventSecondaryBtn:hover {
+
+    background: #fff;
+
+    color: #0F172A;
+
+    transform: translateY(-5px);
+
+}
+
+/*==========================
+       ANIMATIONS
+===========================*/
+
+@keyframes scrollMove {
+
+    0% {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform: translateY(18px);
+
+        opacity: 0;
+
+    }
+
+}
+
+@keyframes movePattern {
+
+    0% {
+
+        background-position: 0 0;
+
+    }
+
+    100% {
+
+        background-position: 140px 140px;
+
+    }
+
+}
+
+/*==========================
+      RESPONSIVE
+===========================*/
+
+@media(max-width:992px) {
+
+    .eventHero {
+
+        min-height: 80vh;
+
+    }
+
+    .eventHeroContent {
+
+        max-width: 100%;
+
+    }
+
+    .eventHeroContent h1 {
+
+        font-size: 4rem;
+
+    }
+
+    .eventHeroContent p {
+
+        font-size: 1.1rem;
+
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .eventHero {
+
+        min-height: 75vh;
+
+        padding: 120px 0 90px;
+
+        background-position: center;
+
+    }
+
+    .eventHeroContainer {
+
+        width: 92%;
+
+    }
+
+    .eventHeroContent {
+
+        text-align: center;
+
+    }
+
+    .eventHeroContent h1 {
+
+        font-size: 2.8rem;
+
+        letter-spacing: 0;
+
+    }
+
+    .eventHeroContent p {
+
+        font-size: 1rem;
+
+        line-height: 1.8;
+
+    }
+
+    .eventHeroButtons {
+
+        justify-content: center;
+
+    }
+
+    .eventPrimaryBtn,
+
+    .eventSecondaryBtn {
+
+        width: 100%;
+
+        max-width: 280px;
+
+    }
+
+
+
+}
+
+@media(max-width:480px) {
+
+    .eventHero {
+
+        min-height: 70vh;
+
+    }
+
+
+
+    .eventHeroContent h1 {
+
+        font-size: 2.2rem;
+
+    }
+
+    .eventHeroContent p {
+
+        font-size: .95rem;
+
+    }
+
+}

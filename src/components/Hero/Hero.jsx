@@ -64,7 +64,7 @@ function Hero() {
 
           <div className="hero-buttons">
 
-           <Link to="/service">  <button className="btn-primary">
+           <Link to="/services/offshore">  <button className="btn-primary " >
               Get Started
             </button></Link>
 

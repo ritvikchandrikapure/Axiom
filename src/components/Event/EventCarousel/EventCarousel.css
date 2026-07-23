@@ -1,0 +1,1165 @@
+/* =========================================================
+   EVENT VIDEOS SECTION
+========================================================= */
+
+.eventVideosSection {
+    position: relative;
+    width: 100%;
+    padding: 70px 0 65px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 50% 50%,
+            rgba(37, 99, 235, 0.12),
+            transparent 32%),
+        radial-gradient(circle at 90% 15%,
+            rgba(6, 182, 212, 0.10),
+            transparent 25%),
+        linear-gradient(135deg,
+            #f8fbff 0%,
+            #eef6ff 50%,
+            #f7fcff 100%);
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.eventGlow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+}
+
+.eventGlowOne {
+    width: 320px;
+    height: 320px;
+
+    left: 20%;
+    top: 35%;
+
+    background: rgba(37, 99, 235, 0.10);
+}
+
+.eventGlowTwo {
+    width: 300px;
+    height: 300px;
+
+    right: 8%;
+    top: 20%;
+
+    background: rgba(6, 182, 212, 0.09);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.eventVideosContainer {
+    position: relative;
+    z-index: 2;
+
+    width: min(1500px, 96%);
+    margin: auto;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.eventVideosHeading {
+    position: relative;
+    z-index: 50;
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.eventSmallTitle {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+
+    color: #2563eb;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.eventSmallTitle::before,
+.eventSmallTitle::after {
+    content: "";
+
+    width: 25px;
+    height: 1px;
+
+    background: #2563eb;
+}
+
+
+.eventVideosHeading h2 {
+    margin: 0 0 12px;
+
+    color: #172033;
+
+    font-size: clamp(36px, 4vw, 50px);
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+
+.eventVideosHeading p {
+    max-width: 680px;
+
+    margin: auto;
+
+    color: #64748b;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CAROUSEL AREA
+========================================================= */
+
+.eventCarouselArea {
+    position: relative;
+
+    width: 100%;
+    height: 410px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    perspective: 1600px;
+
+    user-select: none;
+}
+
+
+.eventCardsStage {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transform-style: preserve-3d;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.eventVideoCard {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 400px;
+
+    padding: 10px;
+
+    overflow: hidden;
+
+    border: 1.5px solid transparent;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(#ffffff,
+            #ffffff) padding-box,
+
+        linear-gradient(135deg,
+            rgba(37, 99, 235, 0.55),
+            rgba(14, 165, 233, 0.35),
+            rgba(6, 182, 212, 0.55)) border-box;
+
+    box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.10),
+        0 5px 20px rgba(37, 99, 235, 0.08);
+
+    cursor: pointer;
+
+    transform-origin: center;
+
+    transition:
+        transform 0.75s cubic-bezier(.22, .61, .36, 1),
+        opacity 0.55s ease,
+        filter 0.55s ease,
+        box-shadow 0.45s ease,
+        border 0.45s ease;
+
+    will-change: transform;
+}
+
+
+/* =========================================================
+   ACTIVE CARD
+========================================================= */
+
+.eventVideoCard.active {
+    z-index: 30;
+
+    opacity: 1;
+
+    filter: none;
+
+    transform:
+        translate(-50%, -50%) translateZ(90px) scale(1.04);
+
+    background:
+        linear-gradient(#ffffff,
+            #ffffff) padding-box,
+
+        linear-gradient(135deg,
+            #2563eb,
+            #38bdf8,
+            #06b6d4) border-box;
+
+    box-shadow:
+        0 25px 60px rgba(37, 99, 235, 0.18),
+        0 10px 30px rgba(14, 165, 233, 0.12),
+        0 0 25px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================================
+   LEFT CARD
+========================================================= */
+
+.eventVideoCard.leftOne {
+    z-index: 15;
+
+    opacity: 0.72;
+
+    filter:
+        brightness(0.97) saturate(0.85);
+
+    transform:
+        translate(-50%, -50%) translateX(-390px) rotateY(7deg) scale(0.84);
+}
+
+
+/* =========================================================
+   RIGHT CARD
+========================================================= */
+
+.eventVideoCard.rightOne {
+    z-index: 15;
+
+    opacity: 0.72;
+
+    filter:
+        brightness(0.97) saturate(0.85);
+
+    transform:
+        translate(-50%, -50%) translateX(390px) rotateY(-7deg) scale(0.84);
+}
+
+
+/* =========================================================
+   FAR LEFT CARD
+========================================================= */
+
+.eventVideoCard.leftTwo {
+    z-index: 5;
+
+    opacity: 0.25;
+
+    filter:
+        brightness(0.98) saturate(0.70);
+
+    transform:
+        translate(-50%, -50%) translateX(-690px) scale(0.68);
+}
+
+
+/* =========================================================
+   FAR RIGHT CARD
+========================================================= */
+
+.eventVideoCard.rightTwo {
+    z-index: 5;
+
+    opacity: 0.25;
+
+    filter:
+        brightness(0.98) saturate(0.70);
+
+    transform:
+        translate(-50%, -50%) translateX(690px) scale(0.68);
+}
+
+
+/* =========================================================
+   HIDDEN CARD
+========================================================= */
+
+.eventVideoCard.hiddenCard {
+    z-index: 0;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -50%) scale(0.5);
+}
+
+
+/* =========================================================
+   CARD TOP
+   WORKSHOP / WEBINAR / LIVE SESSION
+========================================================= */
+
+.eventCardTop {
+    width: 100%;
+
+    min-height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 1px 3px 9px;
+}
+
+
+/* =========================================================
+   CATEGORY BADGE
+========================================================= */
+
+.eventVideoCategory {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(135deg,
+            #eff6ff,
+            #f0f9ff);
+
+    color: #2563eb;
+
+    box-shadow:
+        0 4px 12px rgba(37, 99, 235, 0.08);
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CATEGORY DOT
+========================================================= */
+
+.categoryDot {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 0 4px rgba(34, 197, 94, 0.12),
+        0 0 8px rgba(34, 197, 94, 0.55);
+}
+
+
+/* =========================================================
+   THUMBNAIL FRAME
+========================================================= */
+
+.eventThumbnailFrame {
+    position: relative;
+
+    width: 100%;
+
+    padding: 4px;
+
+    overflow: hidden;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(135deg,
+            #eff6ff,
+            #f8fbff);
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.80),
+        0 5px 15px rgba(37, 99, 235, 0.06);
+}
+
+
+/* =========================================================
+   THUMBNAIL IMAGE CONTAINER
+========================================================= */
+
+.eventVideoImage {
+    position: relative;
+
+    width: 100%;
+    height: 210px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background: #0f172a;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.eventVideoImage img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+
+    transition:
+        transform 0.6s cubic-bezier(.22, .61, .36, 1),
+        filter 0.4s ease;
+}
+
+
+.eventVideoCard.active:hover .eventVideoImage img {
+    transform: scale(1.045);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.eventVideoOverlay {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(180deg,
+            rgba(15, 23, 42, 0.02) 0%,
+            rgba(15, 23, 42, 0.03) 55%,
+            rgba(15, 23, 42, 0.18) 100%);
+}
+
+
+/* =========================================================
+   PLAY BUTTON
+========================================================= */
+
+.eventVideoPlay {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    z-index: 5;
+
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform:
+        translate(-50%, -50%);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.45);
+
+    border-radius: 50%;
+
+    color: #ffffff;
+
+    background:
+        rgba(15, 23, 42, 0.78);
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.25);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.eventVideoPlay svg {
+    position: relative;
+
+    z-index: 3;
+
+    margin-left: 4px;
+
+    font-size: 17px;
+}
+
+
+.eventVideoCard.active:hover .eventVideoPlay {
+    transform:
+        translate(-50%, -50%) scale(1.10);
+
+    background:
+        linear-gradient(135deg,
+            #2563eb,
+            #0ea5e9);
+
+    box-shadow:
+        0 10px 30px rgba(37, 99, 235, 0.40);
+}
+
+
+/* =========================================================
+   PLAY PULSE
+========================================================= */
+
+.eventVideoPulse {
+    position: absolute;
+
+    inset: -7px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.65);
+
+    border-radius: 50%;
+
+    animation:
+        eventVideoPulseAnimation 2s infinite;
+}
+
+
+@keyframes eventVideoPulseAnimation {
+
+    0% {
+        transform: scale(0.85);
+        opacity: 0.8;
+    }
+
+    70% {
+        opacity: 0.15;
+    }
+
+    100% {
+        transform: scale(1.45);
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   CARD INFORMATION
+========================================================= */
+
+.eventVideoInfo {
+    width: 100%;
+
+    min-height: 82px;
+
+    padding: 15px 4px 5px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 14px;
+}
+
+
+/* =========================================================
+   CARD TEXT
+========================================================= */
+
+.eventVideoText {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.eventVideoText h3 {
+    margin: 0 0 6px;
+
+    overflow: hidden;
+
+    color: #172033;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+
+    font-weight: 750;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+.eventVideoText p {
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   WATCH BUTTON
+========================================================= */
+
+.eventWatchButton {
+    flex-shrink: 0;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 10px 15px;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 50px;
+
+    color: #2563eb;
+
+    background:
+        linear-gradient(135deg,
+            #eff6ff,
+            #f0f9ff);
+
+    font-size: 12px;
+
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.eventWatchButton svg {
+    font-size: 10px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.eventWatchButton:hover {
+    color: #ffffff;
+
+    border-color: transparent;
+
+    background:
+        linear-gradient(135deg,
+            #2563eb,
+            #0ea5e9);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+.eventWatchButton:hover svg {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   ACTIVE BOTTOM LINE
+========================================================= */
+
+.eventCardActiveLine {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    transform:
+        translateX(-50%);
+
+    border-radius:
+        10px 10px 0 0;
+
+    background:
+        linear-gradient(90deg,
+            #2563eb,
+            #06b6d4);
+
+    transition:
+        width 0.5s ease;
+}
+
+
+.eventVideoCard.active .eventCardActiveLine {
+    width: 65%;
+}
+
+
+/* =========================================================
+   CAROUSEL ARROWS
+========================================================= */
+
+.eventCarouselArrow {
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 100;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform:
+        translateY(-50%);
+
+    border:
+        1px solid rgba(37, 99, 235, 0.16);
+
+    border-radius: 50%;
+
+    color: #2563eb;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.10),
+        0 0 20px rgba(37, 99, 235, 0.05);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.eventCarouselArrow:hover {
+    color: #ffffff;
+
+    background:
+        linear-gradient(135deg,
+            #2563eb,
+            #0ea5e9);
+
+    transform:
+        translateY(-50%) scale(1.08);
+
+    box-shadow:
+        0 12px 30px rgba(37, 99, 235, 0.25);
+}
+
+
+.eventCarouselArrowLeft {
+    left: 20px;
+}
+
+
+.eventCarouselArrowRight {
+    right: 20px;
+}
+
+
+/* =========================================================
+   DOTS
+========================================================= */
+
+.eventCarouselDots {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 5px;
+}
+
+
+.eventCarouselDot {
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: #cbd5e1;
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.eventCarouselDot:hover {
+    transform: scale(1.2);
+
+    background: #94a3b8;
+}
+
+
+.eventCarouselDot.activeDot {
+    width: 28px;
+
+    background:
+        linear-gradient(90deg,
+            #2563eb,
+            #06b6d4);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .eventVideoCard {
+        width: 350px;
+    }
+
+
+    .eventVideoImage {
+        height: 190px;
+    }
+
+
+    .eventVideoCard.leftOne {
+        transform:
+            translate(-50%, -50%) translateX(-285px) scale(0.82);
+    }
+
+
+    .eventVideoCard.rightOne {
+        transform:
+            translate(-50%, -50%) translateX(285px) scale(0.82);
+    }
+
+
+    .eventVideoCard.leftTwo,
+    .eventVideoCard.rightTwo {
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .eventVideosSection {
+        padding: 50px 0;
+    }
+
+
+    .eventVideosContainer {
+        width: 100%;
+    }
+
+
+    .eventVideosHeading {
+        padding: 0 20px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .eventVideosHeading h2 {
+        font-size: 30px;
+    }
+
+
+    .eventVideosHeading p {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .eventCarouselArea {
+        height: 390px;
+    }
+
+
+    .eventVideoCard {
+        width: min(340px, 82vw);
+    }
+
+
+    .eventVideoCard.active {
+        transform:
+            translate(-50%, -50%);
+    }
+
+
+    .eventVideoCard.leftOne {
+        opacity: 0.12;
+
+        transform:
+            translate(-50%, -50%) translateX(-230px) scale(0.72);
+    }
+
+
+    .eventVideoCard.rightOne {
+        opacity: 0.12;
+
+        transform:
+            translate(-50%, -50%) translateX(230px) scale(0.72);
+    }
+
+
+    .eventVideoCard.leftTwo,
+    .eventVideoCard.rightTwo {
+        opacity: 0;
+    }
+
+
+    .eventVideoImage {
+        height: 185px;
+    }
+
+
+    .eventCarouselArrow {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .eventCarouselArrowLeft {
+        left: 7px;
+    }
+
+
+    .eventCarouselArrowRight {
+        right: 7px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .eventVideosHeading h2 {
+        font-size: 27px;
+    }
+
+
+    .eventSmallTitle {
+        font-size: 9px;
+    }
+
+
+    .eventCarouselArea {
+        height: 365px;
+    }
+
+
+    .eventVideoCard {
+        width: 82vw;
+
+        padding: 8px;
+
+        border-radius: 20px;
+    }
+
+
+    .eventCardTop {
+        min-height: 34px;
+
+        padding-bottom: 7px;
+    }
+
+
+    .eventVideoCategory {
+        padding: 6px 10px;
+
+        font-size: 9px;
+    }
+
+
+    .eventThumbnailFrame {
+        padding: 3px;
+
+        border-radius: 15px;
+    }
+
+
+    .eventVideoImage {
+        height: 175px;
+
+        border-radius: 12px;
+    }
+
+
+    .eventVideoPlay {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .eventVideoPlay svg {
+        font-size: 14px;
+    }
+
+
+    .eventVideoInfo {
+        min-height: 72px;
+
+        padding:
+            12px 3px 3px;
+
+        gap: 8px;
+    }
+
+
+    .eventVideoText h3 {
+        font-size: 14px;
+    }
+
+
+    .eventVideoText p {
+        font-size: 9px;
+    }
+
+
+    .eventWatchButton {
+        padding: 8px 11px;
+
+        font-size: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .eventVideoCard,
+    .eventVideoImage img,
+    .eventVideoPlay,
+    .eventWatchButton,
+    .eventCarouselArrow,
+    .eventCarouselDot {
+        transition: none;
+    }
+
+
+    .eventVideoPulse {
+        animation: none;
+    }
+
+}

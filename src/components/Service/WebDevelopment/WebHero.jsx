@@ -40,17 +40,6 @@ function WebHero() {
         experience to help businesses grow faster in the digital world.
       </p>
 
-      <div className="heroButtons">
-
-        <Link to="/contact" className="primaryBtn">
-          Start Your Project
-        </Link>
-
-        <Link to="/portfolio" className="secondaryBtn">
-          View Portfolio
-        </Link>
-
-      </div>
 
     </motion.div>
 

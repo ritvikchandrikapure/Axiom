@@ -207,7 +207,7 @@ function Navbar() {
 
               </Link>
 
-             
+
               <Link
 
                 to="/services/digital-marketing"
@@ -220,9 +220,9 @@ function Navbar() {
 
               </Link>
 
-            
 
-             
+
+
               <Link
 
                 to="/services/hire-developer"
@@ -259,7 +259,7 @@ function Navbar() {
               onClick={closeMenu}
             >
 
-              Blog
+              Blogs
 
             </Link>
 
@@ -349,11 +349,11 @@ function Navbar() {
 
               ?
 
-              <FaTimes/>
+              <FaTimes />
 
               :
 
-              <FaBars/>
+              <FaBars />
 
           }
 
